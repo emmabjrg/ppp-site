@@ -3,50 +3,54 @@
 ---
 
 <div
-  class="w-full max-w-3xl mx-auto p-4 bg-balticsea"
-  x-data="{ currentProject: 0, projects: ['001 København Billeder', '002 Another Project', '003 Third Project', '004 Fourth Project'] }"
+  class="w-full max-w-3xl mx-auto p-4 bg-balticsea z-0"
+  x-data="{ 
+    currentProject: 0, 
+    projects: [
+      { title: '001 København Billeder', image: '/kobenhavnbilleder.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://kobenhavnerbog.netlify.app/'},
+      { title: '002 Møllegades Boghandel', image: '/mollegadesbog.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://moellegadesboghandel.netlify.app/' },
+      { title: '003 Digital Cleanup Day', image: '/digicleanday.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://digitalskraldedaggr4.netlify.app/' },
+      { title: '004 Girltalk webfeature', image: '/girltalk.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://girltalkbreakup.netlify.app/' }
+    ] 
+  }"
 >
-  <div class="relative bg-white p-6 rounded-lg shadow-lg">
-    <!-- Carousel content -->
+  <div class="relative">
+    <!-- Carousel indhold -->
     <div class="flex justify-between items-center">
       <button
         @click="currentProject = (currentProject - 1 + projects.length) % projects.length"
-        class="text-gray-500 hover:text-gray-700"
+        class="text-brightsun hover:text-greenwhite transition w-60 text-8xl"
       >
         &#8249;
       </button>
 
-      <!-- Display project content -->
-      <div class="text-center font-fragment-mono">
-        <img src="/kobenhavnbilled.webp" alt="" class="rounded" />
-        <h1
-          class="text-3xl font-bold text-deepaqua"
-          x-text="projects[currentProject]"
-        >
-        </h1>
-        <p class="mt-4 text-greenwhite">
-          Project content for <span x-text="projects[currentProject]"></span>
+      <!-- projekt-indholdet -->
+      <div class="text-center font-fragment-mono pt-4">
+        <a :href="projects[currentProject].link" target="_blank">
+          <img
+            :src="projects[currentProject].image"
+            alt="Project image"
+            class="w-full mx-auto mb-4 rounded hover:scale-[102%] grayscale hover:filter hover:grayscale-0 transition"
+          />
+        </a>
+        <a :href="projects[currentProject].link" target="_blank">
+          <h1
+            class="text-3xl font-bold text-deepaqua pt-4 hover:text-brightsun transition"
+            x-text="projects[currentProject].title"
+          >
+          </h1>
+        </a>
+        <p class="mt-4 text-greenwhite text-start pb-6">
+          <span x-text="projects[currentProject].content"></span>
         </p>
       </div>
 
       <button
         @click="currentProject = (currentProject + 1) % projects.length"
-        class="text-gray-500 hover:text-gray-700"
+        class="text-brightsun hover:text-greenwhite transition w-60 text-8xl"
       >
         &#8250;
       </button>
-    </div>
-
-    <!-- Dots for carousel navigation -->
-    <div class="mt-4 flex justify-center space-x-2">
-      <template x-for="(project, index) in projects" :key="index">
-        <button
-          @click="currentProject = index"
-          :class="currentProject === index ? 'bg-gray-900' : 'bg-gray-300'"
-          class="w-3 h-3 rounded-full focus:outline-none"
-        >
-        </button>
-      </template>
     </div>
   </div>
 </div>
