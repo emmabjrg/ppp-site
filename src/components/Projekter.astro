@@ -26,21 +26,23 @@
 
       <!-- projekt-indholdet -->
       <div class="text-center font-fragment-mono pt-4">
-        <a :href="projects[currentProject].link" target="_blank">
-          <img
-            :src="projects[currentProject].image"
-            alt="Project image"
-            class="w-full mx-auto mb-4 rounded hover:scale-[102%] grayscale hover:filter hover:grayscale-0 transition"
-          />
-        </a>
+        <div class="w-full h-full">
+          <a :href="projects[currentProject].link" target="_blank">
+            <img
+              :src="projects[currentProject].image"
+              alt="Project image"
+              class="rounded hover:scale-[102%] grayscale hover:filter hover:grayscale-0 transition"
+            />
+          </a>
+        </div>
         <a :href="projects[currentProject].link" target="_blank">
           <h1
-            class="text-3xl font-bold text-deepaqua pt-4 hover:text-brightsun transition"
+            class="text-3xl font-bold text-deepaqua pt-4 hover:text-brightsun transition tracking-widest"
             x-text="projects[currentProject].title"
           >
           </h1>
         </a>
-        <p class="mt-4 text-greenwhite text-start pb-6">
+        <p class="mt-4 text-greenwhite text-start pb-6 text-sm leading-relaxed">
           <span x-text="projects[currentProject].content"></span>
         </p>
       </div>
