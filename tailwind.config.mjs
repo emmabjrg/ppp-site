@@ -5,7 +5,7 @@ export default {
         colors: {
             'brightsun':'#F9D142',
             'greenwhite':'#E9E9E9',
-            'deepaqua':'#008080',
+            'deepaqua':'#007575',
             'balticsea':'#292826',
           },
 		extend: {

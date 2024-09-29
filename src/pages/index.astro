@@ -5,73 +5,134 @@ import Buttonlil from "../components/Buttonlil.astro";
 import Link from "../components/Link.astro";
 import Software from "../components/Software.astro";
 import Projekter from "../components/Projekter.astro";
+import Aspekter from "../components/Aspekter.astro";
 import { Image } from "astro:assets";
+const name = "Astro";
 ---
 
 <MainLayout title="Emma Bjørg Augereau Sørensen">
   <div>
-    <section id="herounit" class="">
-      <div>
-        <h1></h1>
-        <Button />
+    <section id="herounit" class="grid grid-cols-2 pt-32 pb-40 px-64 gap-10">
+      <div class="grid grid-rows-1 justify-center w-full h-full items-center">
+        <div class="flex flex-col justify-end items-center gap-14">
+          <div class="gap-0">
+            <h1
+              class="text-4xl font-black uppercase text-balticsea text-center p-0"
+            >
+              Emma Bjørg Augereau
+            </h1>
+            <h1
+              class="text-[87px] font-black uppercase text-balticsea text-center p-0"
+            >
+              Sørensen
+            </h1>
+          </div>
+          <Button />
+        </div>
       </div>
-      <img src="" alt="" />
+      <div class="flex justify-center items-center">
+        <img src="/public/portrait.webp" alt="Portrait" class="w-64" />
+      </div>
     </section>
-    <section>
-      <h2>Hvem er jeg?</h2>
-      <h3>... og hvad vil jeg?</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-        explicabo, accusantium eaque a fugiat vel officiis voluptatum saepe
-        consectetur esse tenetur. Officia eum numquam odio excepturi voluptatem
-        possimus laborum pariatur! Aspernatur cum quos, quae neque error,
-        laboriosam necessitatibus alias fugit quaerat sit iusto? Magni, id? Eos
-        illo eaque nisi libero inventore maiores quod, architecto quibusdam,
-        minus accusamus ratione vitae sed. Blanditiis, excepturi? Nemo
-        repudiandae, excepturi veritatis, quo natus voluptatum ad facere impedit
-        at, debitis in suscipit fugit id quis repellendus qui omnis. Rem quam
-        dicta, non repudiandae beatae sunt iste. Repellat, reiciendis beatae.
-        Explicabo, at laudantium? Beatae, dolorum? Pariatur ea excepturi amet id
-        possimus velit saepe eligendi libero, labore repudiandae nam fugiat
-        ipsum iusto laudantium odit omnis quidem, cumque consectetur! Ipsa
-        blanditiis corporis alias culpa dolores nemo beatae assumenda cum, sed
-        impedit! Facere non exercitationem fugit esse sunt eum accusantium,
-        dolorem quas unde, laboriosam architecto amet! Iure esse asperiores
-        doloribus? Dicta quaerat tenetur eos blanditiis ipsa voluptatum
-        accusantium aliquid obcaecati, quis recusandae optio odit harum ipsam
-        adipisci quas iste deserunt dignissimos minima pariatur porro autem?
-        Sapiente eum officia quisquam mollitia!
+
+    <section class="w-full flex flex-col justify-center items-center pb-32">
+      <h2 class="text-5xl font-black uppercase text-balticsea text-center">
+        Hvem er jeg?
+      </h2>
+      <h3 class="italic text-deepaqua pt-2 pb-6 text-xl">
+        ... og hvad vil jeg?
+      </h3>
+      <p class="w-5/12 text-sm leading-relaxed font-fragment-mono">
+        Jeg er multimediedesign-studerende i gang med mit 3. semester på KEA og
+        er drevet af en konstant nysgerrighed efter at udforske, hvordan design
+        kan skabe meningsfulde brugeroplevelser. <br /><br /> Jeg elsker at fordybe
+        mig i den kreative proces, fra den tidlige skitse til den færdige brugergrænseflade.
+        Hvad enten det handler om at designe intuitive apps, skabe visuelle elementer
+        eller dykke ned i UX-processer, finder jeg inspiration i arbejdet med at
+        forene æstetik og funktionalitet. <br /><br />Mit fokus på detaljerne
+        sikrer, at mit design altid leverer kvalitet og funktionalitet. Jeg
+        søger en praktikplads, hvor jeg kan fordybe mig i læring, udforske nye
+        teknikker og opnå praktisk erfaring, mens jeg udvikler design, der både
+        skaber værdi og fungerer optimalt. <br /><br /><i
+          >Og så er jeg helt vildt god til mariokart.</i
+        >
       </p>
     </section>
-    <section class="bg-deepaqua">
-      <h2>Færdigheder</h2>
-      <h3>Mine erfaringer med diverse softwares</h3>
-      <article class="grid grid-cols-3">
-        <Software />
-      </article>
-      <p>
+    <section
+      class="bg-deepaqua w-full flex flex-col justify-center items-center pb-32"
+    >
+      <h2
+        class="pt-20 text-5xl font-black uppercase text-brightsun text-center pb-6"
+      >
+        Færdigheder
+      </h2>
+      <p
+        class="w-5/12 text-sm leading-relaxed font-fragment-mono text-greenwhite"
+      >
         Gennem mit studie som multimediedesign-studerende på KEA og mine
         tidligere projekter har jeg opnået solid erfaring med flere vigtige
         aspekter af UX/UI-design, herunder:
       </p>
-      <ul>
-        <li>Research</li>
-        <li>Wireframes</li>
-        <li>Prototyper</li>
-        <li>Brugertests</li>
-        <li>Brugercentreret design</li>
-        <li>Projektstyring</li>
-        <li>Designprocesser</li>
-      </ul>
+      <div
+        class="text-brightsun text-center italic font-fragment-mono text-sm pt-6 tracking-wide gap-2"
+      >
+        <div class="flex justify-center">
+          <p>Research</p>
+          <p class="px-4">-</p>
+          <p>Wireframes</p>
+          <p class="px-4">-</p>
+          <p>Prototyping</p>
+          <p class="px-4">-</p>
+          <p>Brugertests</p>
+        </div>
+
+        <div class="flex justify-center pt-2">
+          <p>Projektstyring</p>
+          <p class="px-4">-</p>
+          <p>Brugercentreret design</p>
+          <p class="px-4">-</p>
+          <p>Designprocesser</p>
+        </div>
+      </div>
+      <p
+        class="w-5/12 text-sm leading-relaxed font-fragment-mono text-greenwhite pt-20"
+      >
+        Derudover har jeg primært gennem studiet stiftet bekendtskab med flere
+        digitale værktøjer og teknologier, herunder:
+      </p>
+
+      <article class="grid grid-cols-3 gap-10 pt-10">
+        <Software tool="Figma" erfaring="Erfaren" />
+        <Software tool="Premiere Pro" erfaring="Erfaren" />
+        <Software tool="Html" erfaring="Erfaren" />
+        <Software tool="Illustrator" erfaring="Moderat" />
+        <Software tool="InDesign" erfaring="Let øvet" />
+        <Software tool="CSS" erfaring="Erfaren" />
+        <Software tool="Photoshop" erfaring="Moderat" />
+        <Software tool="After Effects" erfaring="Let øvet" />
+        <Software tool="JavaScript" erfaring="Let øvet" />
+      </article>
     </section>
-    <section>
-      <h2>Tidligere projekter</h2>
-      <h3>Et udvalg af mine seneste webløsninger fra studiet.</h3>
+    <section
+      class="w-full flex flex-col justify-center items-center pt-20 pb-32"
+    >
+      <h2 class="text-5xl font-black uppercase text-balticsea text-center">
+        Tidligere projekter
+      </h2>
+      <h3 class="italic text-deepaqua pt-2 pb-6 text-xl">
+        Et udvalg af mine seneste webløsninger fra studiet.
+      </h3>
       <Projekter />
     </section>
-    <section>
-      <h2>Kontakt</h2>
-      <h3>Kom i kontakt med mig</h3>
+    <section
+      class="w-full flex flex-col justify-center items-center pt-20 pb-32"
+    >
+      <h2 class="text-5xl font-black uppercase text-balticsea text-center">
+        Kontakt
+      </h2>
+      <h3 class="italic text-deepaqua pt-2 pb-6 text-xl">
+        Kom i kontakt med mig
+      </h3>
       <article>
         <div><img src="" alt="" /> <Buttonlil /></div>
       </article>
