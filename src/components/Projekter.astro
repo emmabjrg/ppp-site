@@ -7,10 +7,10 @@
   x-data="{ 
     currentProject: 0, 
     projects: [
-      { title: '001 København Billeder', image: '/kobenhavnbilleder.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://kobenhavnerbog.netlify.app/'},
-      { title: '002 Møllegades Boghandel', image: '/mollegadesbog.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://moellegadesboghandel.netlify.app/' },
-      { title: '003 Digital Cleanup Day', image: '/digicleanday.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://digitalskraldedaggr4.netlify.app/' },
-      { title: '004 Girltalk webfeature', image: '/girltalk.webp', content: 'For at markedsføre bogen Københavnerbilleder udviklede vi et mikrosite, hvor brugerne kunne købe bogen direkte. Siden blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkel one-pager. Det var første gang, vi arbejdede med Tailwind, hvilket gjorde projektet særligt lærerig.', link:'https://girltalkbreakup.netlify.app/' }
+      { title: '001 København Billeder', image: '/kobenhavnbilleder.webp', content: 'For at markedsføre bogen Københavnerbilleder, udviklede jeg et mikrosite, hvor brugerne kunne købe bogen direkte. Sitet blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkelt one-pager. Det var første gang, jeg arbejdede med Tailwind, hvilket gjorde projektet særligt lærerigt.', link:'https://kobenhavnerbog.netlify.app/'},
+      { title: '002 Møllegades Boghandel', image: '/mollegadesbog.webp', content: 'Til min 2. semesters eksamen redesignede jeg, sammen med min gruppe, Møllegades Boghandels website. Vores mål var at implementere flere elementer på sitet - i aftale med boghandlen. Mit primære fokus lå her på at være projektleder, Figma-ansvarlig og udvikle SOME-indholdet.', link:'https://moellegadesboghandel.netlify.app/'},
+      { title: '003 Digital Cleanup Day', image: '/digicleanday.webp', content: 'Digital Cleanup Day er vores bud på den danske pendant til digitalcleanupday.org. Dette projekt lavede vi i grupper, hvor mit fokus primært lå på projektstyring og den designmæssige røde tråd. Vi arbejdede med Figma, Astro, Tailwind.CSS og Alpine.', link:'https://digitalskraldedaggr4.netlify.app/' },
+      { title: '004 Girltalk webfeature', image: '/girltalk.webp', content: 'I samarbejde med Girltalk skulle vi udvikle en webfeature, til deres website. Målet var at konvertere besøgende fra sociale medier til brugere af Girltalks chat-funktion. I dette projekt arbejdede vi i grupper, hvor min primære rolle var projektstyring samt udvikling af SOME-content. Projektet introducerede os til Design Sprint-konceptet.', link:'https://girltalkbreakup.netlify.app/' }
     ] 
   }"
 >
@@ -42,11 +42,13 @@
           >
           </h1>
         </a>
-        <p
-          class="mt-4 text-greenwhite text-start pb-6 text-xs md:text-sm leading-relaxed"
-        >
-          <span x-text="projects[currentProject].content"></span>
-        </p>
+        <div class="w-full h-full">
+          <p
+            class="mt-4 text-greenwhite text-start pb-6 text-xs md:text-sm leading-relaxed"
+          >
+            <span x-text="projects[currentProject].content"></span>
+          </p>
+        </div>
       </div>
 
       <button
