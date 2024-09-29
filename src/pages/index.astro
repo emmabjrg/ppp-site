@@ -13,11 +13,11 @@ const name = "Astro";
   <div>
     <section
       id="herounit"
-      class="grid grid-cols-1 md:grid-cols-2 pt-32 md:pb-40 pb-20 px-8 md:px-16 lg:px-32 xl:px-64 gap-10"
+      class="grid grid-cols-1 lg:grid-cols-2 pt-32 md:pb-40 pb-20 px-8 md:px-16 lg:px-32 xl:px-64 md:gap-10 gap-6"
     >
       <div class="grid grid-rows-1 justify-center w-full h-full items-center">
-        <div class="flex flex-col justify-end items-center gap-0">
-          <div class="gap-0">
+        <div class="flex flex-col justify-end items-center">
+          <div class="">
             <h1
               class="text-3xl md:text-4xl font-black uppercase text-balticsea text-center p-0"
             >
@@ -32,13 +32,13 @@ const name = "Astro";
           <Button />
         </div>
       </div>
-      <div class="flex justify-center items-center">
-        <img src="/valg4.webp" alt="Portrait" class="w-48 md:w-72" />
+      <div class="flex justify-center md:items-center items-start">
+        <img src="/valg4.webp" alt="Portrait" class="w-64 md:w-72" />
       </div>
     </section>
 
     <section
-      class="w-full flex flex-col justify-center items-center pb-32 px-4"
+      class="w-full flex flex-col justify-center items-center md:pb-32 pb-20 px-4"
     >
       <h2
         class="text-3xl md:text-5xl font-black uppercase text-balticsea text-center"
@@ -68,7 +68,7 @@ const name = "Astro";
     </section>
 
     <section
-      class="bg-deepaqua w-full flex flex-col justify-center items-center pb-32 px-4"
+      class="bg-deepaqua w-full flex flex-col justify-center items-center md:pb-32 pb-20 px-4"
     >
       <h2
         class="pt-20 text-3xl md:text-5xl font-black uppercase text-brightsun text-center pb-6"
@@ -83,22 +83,22 @@ const name = "Astro";
         aspekter af UX/UI-design, herunder:
       </p>
       <div
-        class="text-brightsun text-center italic font-fragment-mono text-sm pt-6 tracking-wide gap-2"
+        class="text-brightsun text-center italic font-fragment-mono text-xs md:text-sm pt-6 tracking-wide gap-2"
       >
         <div class="flex justify-center flex-wrap">
           <p>Research</p>
-          <p class="px-4">-</p>
+          <p class="px-2 md:px-4">-</p>
           <p>Wireframes</p>
-          <p class="px-4">-</p>
+          <p class="px-2 md:px-4">-</p>
           <p>Prototyping</p>
-          <p class="px-4">-</p>
+          <p class="px-2 md:px-4">-</p>
           <p>Brugertests</p>
         </div>
         <div class="flex justify-center flex-wrap pt-2">
           <p>Projektstyring</p>
-          <p class="px-4">-</p>
+          <p class="px-2 md:px-4">-</p>
           <p>Brugercentreret design</p>
-          <p class="px-4">-</p>
+          <p class="px-2 md:px-4">-</p>
           <p>Designprocesser</p>
         </div>
       </div>
@@ -109,7 +109,9 @@ const name = "Astro";
         digitale værktøjer og teknologier, herunder:
       </p>
 
-      <article class="grid grid-cols-2 md:grid-cols-3 gap-10 pt-10">
+      <article
+        class="grid grid-cols sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10"
+      >
         <Software tool="Figma" erfaring="Erfaren" />
         <Software tool="Premiere Pro" erfaring="Erfaren" />
         <Software tool="Html" erfaring="Erfaren" />
@@ -123,7 +125,7 @@ const name = "Astro";
     </section>
 
     <section
-      class="w-full flex flex-col justify-center items-center pt-20 px-4"
+      class="w-full flex flex-col justify-center items-center pt-14 md:pt-20 px-4"
     >
       <h2
         class="text-3xl md:text-5xl font-black uppercase text-balticsea text-center"
@@ -161,13 +163,16 @@ const name = "Astro";
           <div class="pb-6 flex justify-center">
             <img src="/mail.svg" alt="" class="w-20 md:w-24" />
           </div>
-          <Buttonlil info="emmabs99@gmail.com" urlen="emmabs99@gmail.com" />
+          <Buttonlil
+            info="emmabs99@gmail.com"
+            urlen="mailto:emmabs99@gmail.com"
+          />
         </div>
         <div class="flex flex-col justify-center items-center">
           <div class="pb-6 flex justify-center">
             <img src="/cellphone.svg" alt="" class="w-16 md:w-20" />
           </div>
-          <Buttonlil info="+45 23 64 97 13" urlen="+4523649713" />
+          <Buttonlil info="+45 23 64 97 13" urlen="tel:+4523649713" />
         </div>
       </article>
     </section>

@@ -37,12 +37,14 @@
         </div>
         <a :href="projects[currentProject].link" target="_blank">
           <h1
-            class="text-3xl font-bold text-deepaqua pt-4 hover:text-brightsun transition tracking-widest"
+            class="md:text-3xl text-xl font-bold text-deepaqua pt-4 hover:text-brightsun transition tracking-widest"
             x-text="projects[currentProject].title"
           >
           </h1>
         </a>
-        <p class="mt-4 text-greenwhite text-start pb-6 text-sm leading-relaxed">
+        <p
+          class="mt-4 text-greenwhite text-start pb-6 text-xs md:text-sm leading-relaxed"
+        >
           <span x-text="projects[currentProject].content"></span>
         </p>
       </div>
