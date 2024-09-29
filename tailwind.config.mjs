@@ -2,7 +2,17 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+        colors: {
+            'brightsun':'#F9D142',
+            'greenwhite':'#E9E9E9',
+            'deepaqua':'#008080',
+            'balticsea':'#292826',
+          },
+		extend: {
+            fontFamily: {
+                'fragment-mono': ['Fragment Mono', 'monospace'],
+            }
+        },
 	},
 	plugins: [
         require('@tailwindcss/typography'),
