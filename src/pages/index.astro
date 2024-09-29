@@ -1,15 +1,80 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Buttonlil from "../components/Buttonlil.astro";
+import Link from "../components/Link.astro";
+import Software from "../components/Software.astro";
+import Projekter from "../components/Projekter.astro";
+import { Image } from "astro:assets";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Emma Bjørg Augereau Sørensen">
+  <div>
+    <section id="herounit">
+      <div>
+        <h1></h1>
+        <Button />
+      </div>
+      <img src="" alt="" />
+    </section>
+    <section>
+      <h2>Hvem er jeg?</h2>
+      <h3>... og hvad vil jeg?</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+        explicabo, accusantium eaque a fugiat vel officiis voluptatum saepe
+        consectetur esse tenetur. Officia eum numquam odio excepturi voluptatem
+        possimus laborum pariatur! Aspernatur cum quos, quae neque error,
+        laboriosam necessitatibus alias fugit quaerat sit iusto? Magni, id? Eos
+        illo eaque nisi libero inventore maiores quod, architecto quibusdam,
+        minus accusamus ratione vitae sed. Blanditiis, excepturi? Nemo
+        repudiandae, excepturi veritatis, quo natus voluptatum ad facere impedit
+        at, debitis in suscipit fugit id quis repellendus qui omnis. Rem quam
+        dicta, non repudiandae beatae sunt iste. Repellat, reiciendis beatae.
+        Explicabo, at laudantium? Beatae, dolorum? Pariatur ea excepturi amet id
+        possimus velit saepe eligendi libero, labore repudiandae nam fugiat
+        ipsum iusto laudantium odit omnis quidem, cumque consectetur! Ipsa
+        blanditiis corporis alias culpa dolores nemo beatae assumenda cum, sed
+        impedit! Facere non exercitationem fugit esse sunt eum accusantium,
+        dolorem quas unde, laboriosam architecto amet! Iure esse asperiores
+        doloribus? Dicta quaerat tenetur eos blanditiis ipsa voluptatum
+        accusantium aliquid obcaecati, quis recusandae optio odit harum ipsam
+        adipisci quas iste deserunt dignissimos minima pariatur porro autem?
+        Sapiente eum officia quisquam mollitia!
+      </p>
+    </section>
+    <section class="bg-deepaqua">
+      <h2>Færdigheder</h2>
+      <h3>Mine erfaringer med diverse softwares</h3>
+      <article class="grid grid-cols-3">
+        <Software />
+      </article>
+      <p>
+        Gennem mit studie som multimediedesign-studerende på KEA og mine
+        tidligere projekter har jeg opnået solid erfaring med flere vigtige
+        aspekter af UX/UI-design, herunder:
+      </p>
+      <li>
+        <ul>Research</ul>
+        <ul>Wireframes</ul>
+        <ul>Prototyper</ul>
+        <ul>Brugertests</ul>
+        <ul>Brugercentreret design</ul>
+        <ul>Projektstyring</ul>
+        <ul>Designprocesser</ul>
+      </li>
+    </section>
+    <section>
+      <h2>Tidligere projekter</h2>
+      <h3>Et udvalg af mine seneste webløsninger fra studiet.</h3>
+      <Projekter />
+    </section>
+    <section>
+      <h2>Kontakt</h2>
+      <h3>Kom i kontakt med mig</h3>
+      <article>
+        <div><img src="" alt="" /> <Buttonlil /></div>
+      </article>
+    </section>
+  </div>
 </MainLayout>
