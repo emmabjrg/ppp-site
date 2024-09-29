@@ -11,7 +11,7 @@ export default {
 		extend: {
             fontFamily: {
                 'fragment-mono': ['Fragment Mono', 'monospace'],
-            }
+            },
         },
 	},
 	plugins: [
