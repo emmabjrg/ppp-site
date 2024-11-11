@@ -7,15 +7,15 @@
   x-data="{ 
     currentProject: 0, 
     projects: [
-      { title: '001 Københavnerbilleder', image: '/kobenhavnbilleder.webp', content: 'For at markedsføre bogen Københavnerbilleder, udviklede jeg et mikrosite, hvor brugerne kunne købe bogen direkte. Sitet blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkelt one-pager. Det var første gang, jeg arbejdede med Tailwind, hvilket gjorde projektet særligt lærerigt.', link:'https://kobenhavnerbog.netlify.app/'},
-      { title: '002 Møllegades Boghandel', image: '/mollegadesbog.webp', content: 'Til min 2. semesters eksamen redesignede jeg, sammen med min gruppe, Møllegades Boghandels website. Vores mål var at implementere flere elementer på sitet - i aftale med boghandlen. Mit primære fokus lå her på at være projektleder, Figma-ansvarlig og udvikle SOME-indholdet.', link:'https://moellegadesboghandel.netlify.app/'},
-      { title: '003 Digital Cleanup Day', image: '/digicleanday.webp', content: 'Digital Cleanup Day er vores bud på den danske pendant til digitalcleanupday.org. Dette projekt lavede vi i grupper, hvor mit fokus primært lå på projektstyring og den designmæssige røde tråd. Vi arbejdede med Figma, Astro, Tailwind.CSS og Alpine.', link:'https://digitalskraldedaggr4.netlify.app/' },
-      { title: '004 Girltalk webfeature', image: '/girltalk.webp', content: 'I samarbejde med Girltalk skulle vi udvikle en webfeature til deres website. Målet var at konvertere besøgende fra sociale medier til brugere af Girltalks chat-funktion. I dette projekt arbejdede vi i grupper, hvor min primære rolle var projektstyring samt udvikling af SOME-content. Projektet introducerede os til Design Sprint-konceptet.', link:'https://girltalkbreakup.netlify.app/' }
+      { title: '01 Københavnerbilleder', image: '/kobenhavnbilleder.webp', content: 'For at markedsføre bogen Københavnerbilleder, udviklede jeg et mikrosite, hvor brugerne kunne købe bogen direkte. Sitet blev kodet med Tailwind og præsenterede bogens indhold, billeder og anmeldelser i en enkelt one-pager. Det var første gang, jeg arbejdede med Tailwind, hvilket gjorde projektet særligt lærerigt.', link:'https://kobenhavnerbog.netlify.app/'},
+      { title: '02 Møllegades Boghandel', image: '/mollegadesbog.webp', content: 'Til min 2. semesters eksamen redesignede jeg, sammen med min gruppe, Møllegades Boghandels website. Vores mål var at implementere flere elementer på sitet - i aftale med boghandlen. Mit primære fokus lå her på at være projektleder, Figma-ansvarlig og udvikle SOME-indholdet.', link:'https://moellegadesboghandel.netlify.app/'},
+      { title: '03 Digital Cleanup Day', image: '/digicleanday.webp', content: 'Digital Cleanup Day er vores bud på den danske pendant til digitalcleanupday.org. Dette projekt lavede vi i grupper, hvor mit fokus primært lå på projektstyring og den designmæssige røde tråd. Vi arbejdede med Figma, Astro, Tailwind.CSS og Alpine.', link:'https://digitalskraldedaggr4.netlify.app/' },
+      { title: '04 Girltalk webfeature', image: '/girltalk.webp', content: 'I samarbejde med Girltalk skulle vi udvikle en webfeature til deres website. Målet var at konvertere besøgende fra sociale medier til brugere af Girltalks chat-funktion. I dette projekt arbejdede vi i grupper, hvor min primære rolle var projektstyring samt udvikling af SOME-content. Projektet introducerede os til Design Sprint-konceptet.', link:'https://girltalkbreakup.netlify.app/' }
     ] 
   }"
 >
   <div class="relative">
-    <!-- Carousel indhold -->
+    <!-- indhold i karusellen :)) -->
     <div class="flex justify-between items-center">
       <button
         @click="currentProject = (currentProject - 1 + projects.length) % projects.length"
@@ -49,6 +49,11 @@
             <span x-text="projects[currentProject].content"></span>
           </p>
         </div>
+        <button
+          class="bg-deepaqua p-4 mb-2 rounded-full px-8 hover:bg-brightsun hover:text-deepaqua transition text-balticsea"
+          ><a :href="projects[currentProject].link" target="_blank">Se live</a
+          ></button
+        >
       </div>
 
       <button
